@@ -1,0 +1,16 @@
+<head>
+    <title>meteor scrape</title>
+</head>
+
+<body>
+  <h1>Propertysearch</h1>
+  {{> searchresults}}
+</body>  
+
+<template name="searchresults">
+  <ul>
+    {{#each house}}
+      <li>{{postcode}}: {{price}}</li>
+    {{/each}}
+  </ul>
+</template>
