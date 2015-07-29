@@ -3,3 +3,9 @@ describe("MongoDB template load", function () {
   	expect($('<li>PO</li>')).toHaveText('PO');
   });
 });
+
+describe("web scraping result", function(){
+	it("should include the word bedroom", function(){
+		expect($('<ul>bedroom</ul>')).toHaveText('bedroom');
+	});
+});

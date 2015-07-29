@@ -3,8 +3,17 @@
 </head>
 
 <body>
-  <h1>Propertysearch</h1>
-  {{> searchresults}}
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+	  		<h1>Propertysearch</h1>
+	  		<h3>MongoDB data:</h3>
+	  			{{> searchresults}}
+	  		<h3>scraped Rightmove data:</h3>
+	  			{{> houses}}
+			</div>
+		</div>
+	</div>
 </body>  
 
 <template name="searchresults">
@@ -13,4 +22,9 @@
       <li>{{postcode}}: {{price}}</li>
     {{/each}}
   </ul>
+</template>
+
+<template name="houses">
+<p>Search</p>
+  <ul>{{ search }}</ul>
 </template>
